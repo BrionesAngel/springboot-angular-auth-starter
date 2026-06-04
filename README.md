@@ -37,7 +37,7 @@ cd backend
 ```bash
 cd frontend
 bun install
-bun run dev
+ng serve
 ```
 
 ## Environment Variables
