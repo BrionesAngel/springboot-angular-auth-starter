@@ -5,7 +5,6 @@ import { AuthService } from '../features/auth/auth.service';
 
 @Component({
   selector: 'app-dashboard-placeholder',
-  standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <section class="mx-auto mt-12 w-full max-w-3xl rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
