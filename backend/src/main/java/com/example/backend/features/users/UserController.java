@@ -22,7 +22,7 @@ import lombok.RequiredArgsConstructor;
 public class UserController {
   private final UserService userService;
 
-  @GetMapping("/profile")
+  @GetMapping("/me")
   public UserProfileResponse getMyProfile(@AuthenticationPrincipal CustomUserDetails userDetails) {
     return userService.getMyProfile(userDetails.getUser());
   }
