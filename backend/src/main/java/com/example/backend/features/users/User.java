@@ -15,16 +15,26 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 @Table(name = "users", uniqueConstraints = {
-    @UniqueConstraint(columnNames = {"username"}),
-    @UniqueConstraint(columnNames = {"email"})
+    @UniqueConstraint(columnNames = { "username" }),
+    @UniqueConstraint(columnNames = { "email" })
 })
 public class User {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
+
+  @Column(nullable = false, unique = true, length = 20)
   private String username;
+
+  @Column(nullable = false)
   private String password;
+
+  @Column(nullable = false, unique = true)
   private String email;
+
+  @Column(nullable = false, length = 20)
+  @Enumerated(EnumType.STRING)
+  private Role role;
 
   @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
   @Builder.Default

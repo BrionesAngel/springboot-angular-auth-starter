@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: url_db
+    username: psql_user
+    password: psql_password
+
+jwt:
+  secret: jwt_token_key
+
+stripe:
+  secret-key: your_key
+  webhook-secret: webhook_url
