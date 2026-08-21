@@ -1,8 +1,8 @@
 export interface User {
   id: number;
-  name: string;
+  username: string;
   email: string;
-  createdAt: string;
+  role: string;
 }
 
 export interface LoginRequest {
@@ -21,6 +21,10 @@ export interface AuthResponse {
   accessToken: string;
   refreshToken: string;
   expiresIn: number;
+}
+
+export interface RefreshTokenRequest {
+  refreshToken: string;
 }
 
 export interface RefreshTokenResponse {

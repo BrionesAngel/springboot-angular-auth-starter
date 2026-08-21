@@ -4,8 +4,9 @@ import { Router } from '@angular/router';
 import { Observable, throwError } from 'rxjs';
 import { catchError, finalize, shareReplay, switchMap } from 'rxjs/operators';
 
-import { AuthService } from '../../features/auth/auth.service';
-import { RefreshTokenResponse } from '../../features/auth/types';
+import { RefreshTokenResponse } from '../models/auth.models';
+import { AuthService } from '../services/auth.service';
+
 
 let refreshRequest$: Observable<RefreshTokenResponse> | null = null;
 
